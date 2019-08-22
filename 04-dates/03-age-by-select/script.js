@@ -17,7 +17,7 @@
 
     function getBirthday () {
         let day = document.getElementById("dob-day").value;
-        let month = document.getElementById("dob-month").value;
+        let month = document.getElementById("dob-month").value - 1;
         let year = document.getElementById("dob-year").value;
         let today = new Date();
         let currentYear = today.getFullYear();

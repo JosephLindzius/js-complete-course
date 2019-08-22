@@ -17,14 +17,21 @@
    /* var d = Date();
     var time = d.getHours() + d.getMinutes();
     alert(time); */
+    var d = new Date();
 
-    var x = new Date().getHours();
-    var y = new Date().getMinutes();
-    var time = (x +""+ y);
+    var hour = d.getHours();
+    var minute = d.getMinutes();
+
+    if (minute < 10) {
+        minute = "0" + minute;
+    }
+
+    var time = (hour + "" + minute);
     parseInt(time);
     alert(time);
-    if (time < 1730)  {
-        document.getElementById('target').innerHTML = "Good Morning";
+
+    if (time < 1730) {
+        document.getElementById('target').innerHTML = "Hello";
     } else {
         document.getElementById("target").innerHTML = "Good Evening";
     }

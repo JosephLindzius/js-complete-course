@@ -12,16 +12,41 @@
 (function() {
 
     // your code here
-    var year = document.getElementById("year").value;
-    var d = new Date();
-    d.setFullYear(year);
-    d.setDate(13);
-
-    while (month <= 12) {
-
-    }
 
     document.getElementById("run").addEventListener("click",function () {
 
+      /*  var d = new Date();
+        var year = d.getYear();
+        var mondays = [];
+
+        d.setDate(1);
+
+// Get the first Monday in the month
+        while (d.getDay() !== 1) {
+            d.setDate(d.getDate() + 1);
+        }
+
+// Get all the other Mondays in the month
+        while (d.getYear() === year) {
+            var pushDate = new Date(d.getTime());
+            mondays.push(pushDate.getDate() + '-' + (pushDate.getMonth()+1) + '-' + pushDate.getFullYear());
+            d.setDate(d.getDate() + 7);
+        }
+        alert(mondays); */
+
+       var year = document.getElementById("year").value;
+        var d = new Date();
+       d.setFullYear(year, 0, 13);
+
+        alert(d);
+        let month = 0;
+        while (month < 12) {
+          //  console.log(d.getMonth());
+            d.setMonth(month);
+            if (d.getDay() === 5) {
+               alert(d.getMonth());
+            }
+            month++;
+        }
     } );
 })();
