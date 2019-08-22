@@ -15,23 +15,54 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        function factorF(){
 
-        var number = document.getElementById("number").value;
-        parseFloat(number);
-        alert("Starting factorial processing of: " + number);
-         if (factorial === 0) {
-            return factorial = 1;
-        }
-        alert(factorial);
-
-        function factorial(x) {
-            if (x === 0) {
-                return 1;
+            var factorial = 1;
+            var startNumber = Number(document.getElementById("number").value);
+            for (let i = 1; i <= startNumber; i++) {
+                factorial*=i;
             }
+            alert(factorial);
+        }
+
+        factorF();
+
+
+
+
+
+
+     /*   var fact = document.getElementById("number").value;
+        parseFloat(fact);
+        // your code here
+        function factorial(number) {
+            var end = number;
+            if (number === 0 || number === 1)
+                return 1;
+            while (number > 1) {
+                number--;
+                end *= number;
+            }
+            return end;
+        }
+         alert(factorial(fact));
+*/
+
+       /* var number = document.getElementById("number").value;
+        function factorial(x) {
             return x * factorial(x - 1);
         }
-        alert(factorial(number));
+
+        alert("Starting factorial processing of: " + number);
+        alert(factorial);
+
+        if (number === "0") {
+            alert("1");
+        } else {
+            alert(factorial(+number));
+            }  */
+
+
 
     });
 

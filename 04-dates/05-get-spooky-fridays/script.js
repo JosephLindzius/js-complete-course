@@ -12,5 +12,16 @@
 (function() {
 
     // your code here
+    var year = document.getElementById("year").value;
+    var d = new Date();
+    d.setFullYear(year);
+    d.setDate(13);
 
+    while (month <= 12) {
+
+    }
+
+    document.getElementById("run").addEventListener("click",function () {
+
+    } );
 })();

@@ -13,4 +13,20 @@
 
     // your code here
 
+        function randomColorGenerator() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        var x = randomColorGenerator();
+        alert(x);
+        document.body.style.backgroundColor = x;
+    });
+
 })();

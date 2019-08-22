@@ -11,6 +11,18 @@
 
 (function() {
 
+
+    function changeBackground() {
+        var color = document.getElementById("color").value;
+        document.bgColor = color;
+    }
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        changeBackground();
+    });
+
+
+
+
 
 })();
