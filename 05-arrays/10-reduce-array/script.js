@@ -90,5 +90,9 @@
     ];
 
     // your code here
+    people.reduce(function(total, person){
+        return total + person.age;
+        alert(total);
+    })
 
 })();

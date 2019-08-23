@@ -12,5 +12,48 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        var numbers = [];
+        var i = 0;
+        var sum = 0;
+        var max = 0;
+        var min = 100;
+
+        while  (i < 10) {
+            numbers.push(Math.floor(Math.random() * 100));
+            sum = sum + numbers[i];
+            i++;
+        }
+
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+
+       /* for (var i = 1; i <= numbers.length; i++) {
+                var id = "n-" + i;
+                document.getElementById(id).innerHTML = numbers[i];
+        }*/
+
+        numbers.forEach(function(value, i) {
+            document.getElementById("n-" + (i+1)).innerHTML = value;
+        });
+
+        var average = sum / numbers.length;
+        document.getElementById("min").innerHTML = min;
+        document.getElementById("max").innerHTML = max;
+        document.getElementById("average").innerHTML = average;
+        document.getElementById("sum").innerHTML = sum;
+        console.log(average);
+        console.log(numbers);
+        console.log(min);
+        console.log(max);
+    });
+
+
 
 })();

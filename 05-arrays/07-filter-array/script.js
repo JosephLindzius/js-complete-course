@@ -90,5 +90,13 @@
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click",function () {
+        var ageGroup = [];
+        for (var i = 0; i < people.length; i++) {
+            if (people[i].age > 18) {
+                ageGroup.push(people[i]);
+            }
+        }
+        console.log(ageGroup);
+    });
 })();

@@ -37,16 +37,16 @@
        var year = document.getElementById("year").value;
         var d = new Date();
        d.setFullYear(year, 0, 13);
-
-        alert(d);
+        var wordMonth = "";
         let month = 0;
         while (month < 12) {
-          //  console.log(d.getMonth());
             d.setMonth(month);
             if (d.getDay() === 5) {
-               alert(d.getMonth());
+                const months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                var wordMonth = wordMonth + " " +months[d.getMonth()];
             }
             month++;
         }
+        alert(wordMonth);
     } );
 })();

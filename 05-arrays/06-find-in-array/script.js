@@ -90,5 +90,12 @@
     ];
 
     // your code here
+    people.forEach(function(person, index) {
+        if ((person.lastname === "Dupont") && (person.firstname === "Jean")) {
+            console.log(person);
+        }
+
+
+    });
 
 })();

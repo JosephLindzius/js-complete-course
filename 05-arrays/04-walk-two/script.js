@@ -28,4 +28,12 @@
 
     // your code here
 
+    function displayArray (item) {
+        console.log(item);
+
+    }
+
+    document.getElementById("run").addEventListener("click",function () {
+        fruits.forEach(displayArray);
+    } );
 })();

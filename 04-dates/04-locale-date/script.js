@@ -40,5 +40,5 @@
 
     }
     updateTime();
-
+    //to local date string
 })();
