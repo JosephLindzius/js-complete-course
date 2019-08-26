@@ -25,7 +25,7 @@
             i++;
         }
 
-        for (var i = 0; i < numbers.length; i++) {
+        for (let i = 0; i < numbers.length; i++) {
             if (numbers[i] < min) {
                 min = numbers[i];
             }
@@ -33,11 +33,6 @@
                 max = numbers[i];
             }
         }
-
-       /* for (var i = 1; i <= numbers.length; i++) {
-                var id = "n-" + i;
-                document.getElementById(id).innerHTML = numbers[i];
-        }*/
 
         numbers.forEach(function(value, i) {
             document.getElementById("n-" + (i+1)).innerHTML = value;
@@ -48,12 +43,12 @@
         document.getElementById("max").innerHTML = max;
         document.getElementById("average").innerHTML = average;
         document.getElementById("sum").innerHTML = sum;
-        console.log(average);
-        console.log(numbers);
-        console.log(min);
-        console.log(max);
     });
 
+    /* for (var i = 1; i <= numbers.length; i++) {
+             var id = "n-" + i;
+             document.getElementById(id).innerHTML = numbers[i];
+     }*/
 
 
 })();

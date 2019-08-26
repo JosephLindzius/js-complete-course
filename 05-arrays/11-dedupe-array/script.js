@@ -29,5 +29,12 @@
     ];
 
     // your code here
+    const names = ['John', 'Paul', 'George', 'Ringo', 'John'];
 
+
+    let x = (fruits) => fruits.filter((v,i) => fruits.indexOf(v) === i);
+
+    document.getElementById("run").addEventListener("click", function (){
+        console.log(x(fruits));
+    })
 })();

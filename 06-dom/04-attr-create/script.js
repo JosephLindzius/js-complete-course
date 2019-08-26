@@ -12,5 +12,8 @@
 (function() {
 
     // your code here
+    var source = document.getElementById("source").getAttribute("data-image");
+    document.createElement("img", );
+    alert(source);
 
 })();

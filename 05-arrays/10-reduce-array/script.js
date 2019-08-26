@@ -90,9 +90,24 @@
     ];
 
     // your code here
-    people.reduce(function(total, person){
-        return total + person.age;
-        alert(total);
-    })
+    document.getElementById("run").addEventListener("click", function() {
+       /* function sumofArray(sum, num) {
+            return sum + num;
+        }
+        function myGeeks(item) {
+            alert(people.reduce(sumofArray));
+        }
+        people.forEach(function(person) {
+            var ageTotal = ageTotal + person.age;
+            console.log(ageTotal);
+        }); */
+        const totalAge = people.reduce((totalAgeA, person) => totalAgeA + person.age, 0);
+
+        console.log(totalAge);
+    });
+
+
+
+
 
 })();

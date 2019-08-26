@@ -28,12 +28,16 @@
 
     // your code here
     document.getElementById("run").addEventListener("click", function() {
-        for (var i = 0; i < fruits.length; i++) {
+        /*for (let i = 0; i < fruits.length; i++) {
             if (fruits[i] === "pomme") {
                 console.log("yes");
             } else {
                 console.log("no");
             }
+        }*/
+
+        if (fruits.includes("pomme")) {
+            return console.log("yes");
         }
     });
 
