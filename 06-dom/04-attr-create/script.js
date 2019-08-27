@@ -13,7 +13,10 @@
 
     // your code here
     var source = document.getElementById("source").getAttribute("data-image");
-    document.createElement("img", );
+    var image = document.createElement("img");
+    var imageParent = document.getElementById("target");
     alert(source);
-
+    image.src = source;
+    imageParent.appendChild(image);
+    source.remove();
 })();

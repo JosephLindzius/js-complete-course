@@ -10,7 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
-
     // your code here
+    function validateForm() {
+        let input1 = document.getElementById("pass-one").value;
+        let input2 = document.getElementById("pass-two").value;
+        if (input1 === input2) {
+            alert("Password matches");
+        } else {
+            alert("Passwords do not match");
+            document.getElementById("pass-one").style.borderColor = "red";
+            document.getElementById("pass-one").style.borderColor = "red";
+
+        }
+    }
+
+    document.getElementById("run").addEventListener("click", function() {
+        validateForm();
+    })
 
 })();

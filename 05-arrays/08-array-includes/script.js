@@ -38,6 +38,8 @@
 
         if (fruits.includes("pomme")) {
             return console.log("yes");
+        } else {
+            return console.log("no");
         }
     });
 

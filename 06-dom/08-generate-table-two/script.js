@@ -12,5 +12,20 @@
 (function() {
 
     // your code here
-
+    var target = document.getElementById('target');
+    var tbl = document.createElement('table');
+    tbl.style.width = '100%';
+    tbl.setAttribute('border', '5');
+    var tbdy = document.createElement('tbody');
+    for (let i = 1; i < 11; i++) {
+        var tr = document.createElement('tr');
+        for (let j = 1; j < 11; j++) {
+            var td = document.createElement('td');
+            td.appendChild(document.createTextNode(i + " * " + j + " = " + i*j));
+            tr.appendChild(td);
+            tbdy.appendChild(tr);
+        }
+    }
+    tbl.appendChild(tbdy);
+    target.appendChild(tbl);
 })();

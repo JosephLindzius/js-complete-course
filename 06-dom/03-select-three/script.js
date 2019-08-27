@@ -14,7 +14,7 @@
     // your code here
    // document.getElementsByClassName("target").innerHTML = "pwned"
 
-    var x = document.getElementsByClassName("target");
+    var x = document.querySelectorAll(".target");
 
     for (let i = 0; i < x.length; i++) {
         x[i].innerHTML= "pwned";

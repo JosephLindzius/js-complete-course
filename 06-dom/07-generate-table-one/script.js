@@ -12,5 +12,24 @@
 (function() {
 
     // your code here
+        var target = document.getElementById('target');
+        var tbl = document.createElement('table');
+        tbl.style.width = '100%';
+        tbl.setAttribute('border', '5');
+        var tbdy = document.createElement('tbody');
+        for (let i = 0; i < 10; i++) {
+            var tr = document.createElement('tr');
+            var td = document.createElement('td');
+            td.appendChild(document.createTextNode("Create ME"));
+            tr.appendChild(td);
+
+            tbdy.appendChild(tr);
+        }
+        tbl.appendChild(tbdy);
+        target.appendChild(tbl);
+
+
+
+
 
 })();

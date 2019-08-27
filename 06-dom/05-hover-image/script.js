@@ -12,5 +12,26 @@
 (function() {
 
     // your code here
+    var source1 = document.querySelector("img").getAttribute("data-hover");
+    var source2 = document.querySelector("img").getAttribute("src");
+    var image = document.querySelector("img");
+    var imageParent = document.querySelector("figure");
+    alert(source1);
+    alert(source2);
+    //image.src = source;
+   //
+
+ document.querySelector("img").addEventListener("mouseover", function() {
+    // imageParent.appendChild(image);
+     image.src = source1;
+
+
+
+ });
+
+ document.querySelector("img").addEventListener("mouseleave", function() {
+     image.src = source2;
+
+    });
 
 })();

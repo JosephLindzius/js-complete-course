@@ -12,5 +12,20 @@
 (function() {
 
     // your code here
+    function validateForm() {
+        let input1 = document.getElementById("pass-one").value;
+        let input2 = document.getElementById("pass-two").value;
+        if (input1 === input2) {
+            alert("Password matches");
+        } else {
+            alert("Passwords do not match");
+            document.getElementById("pass-one").classList.add("error");
+            document.getElementById("pass-two").classList.add("error");
 
+        }
+    }
+
+    document.getElementById("run").addEventListener("click", function() {
+        validateForm();
+    })
 })();
