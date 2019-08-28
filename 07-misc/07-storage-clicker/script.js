@@ -12,5 +12,21 @@
 (function() {
 
     // your code here
+    var target = document.getElementById("target");
+    var n = localStorage.getItem('counter');
+
+    if (n === null) {
+        n = 0;
+    }  //this is used if n is not yet defined.
+
+    localStorage.setItem("counter", n);
+    target.innerHTML = n;
+
+    document.getElementById("increment").addEventListener("click", function(){
+        n++;
+        localStorage.setItem("counter", n);
+        target.innerHTML = n;
+
+    });
 
 })();

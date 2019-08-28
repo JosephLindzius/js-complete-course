@@ -12,11 +12,20 @@
 (function() {
 
     // your code here
+    var span = document.getElementById("source");
     var source = document.getElementById("source").getAttribute("data-image");
     var image = document.createElement("img");
     var imageParent = document.getElementById("target");
     alert(source);
     image.src = source;
     imageParent.appendChild(image);
-    source.remove();
+
+    span.remove();
+    /*
+    function removeDummy() {
+        var source = document.getElementById('source');
+        source.parentNode.removeChild(source);
+        return false;
+    }
+    removeDummy();*/
 })();

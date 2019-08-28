@@ -12,12 +12,14 @@
 (function() {
 
     // your code here
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
+    var slider = document.getElementById("slider");
+    alert(slider.value);
+    var output = document.getElementById("target");
+    slider.value = "0" + slider.value;
+
 
     slider.oninput = function() {
-        output.innerHTML = this.value;
+        output.innerHTML = "0" + this.value;
     }
 
 })();

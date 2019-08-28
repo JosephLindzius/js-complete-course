@@ -17,9 +17,10 @@
     var container = document.getElementById("target");
     container.innerText = "";
     var speed = 50;
+
     function typeText() {
         if (i < text.length) {
-            document.getElementById("target").innerHTML += text.charAt(i);
+            container.innerHTML += text.charAt(i);
             i++;
             setTimeout(typeText, speed);
         }

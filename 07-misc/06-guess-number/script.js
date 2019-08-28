@@ -12,5 +12,24 @@
 (function() {
 
     // your code here
+    var attempt = 1;
+    var winningNumber = (Math.floor(Math.random() * 100) + 1);
+    var guess = 0;
+    alert(winningNumber);
+
+     do {
+         guess = prompt("Give guess");
+        if (guess > winningNumber) {
+            alert("too high");
+        } else if (guess < winningNumber){
+            alert("too low");
+        } else {
+            alert("Congratulations, you have selected the correct number");
+        }
+       alert("attempt:" + attempt);
+        attempt++;
+    }  while (guess < winningNumber || guess > winningNumber);
+
+
 
 })();

@@ -13,20 +13,17 @@
 
     // your code here
         var target = document.getElementById('target');
-        var tbl = document.createElement('table');
-        tbl.style.width = '100%';
-        tbl.setAttribute('border', '5');
-        var tbdy = document.createElement('tbody');
+        var table = document.createElement('table');
+        var tableBody = document.createElement('tbody');
         for (let i = 0; i < 10; i++) {
-            var tr = document.createElement('tr');
-            var td = document.createElement('td');
-            td.appendChild(document.createTextNode("Create ME"));
-            tr.appendChild(td);
-
-            tbdy.appendChild(tr);
+            var cell = document.createElement('td');
+            var row = document.createElement('tr');
+            cell.appendChild(document.createTextNode("Create ME"));
+            row.appendChild(cell);
+            tableBody.appendChild(row);
         }
-        tbl.appendChild(tbdy);
-        target.appendChild(tbl);
+        table.appendChild(tableBody);
+        target.appendChild(table);
 
 
 

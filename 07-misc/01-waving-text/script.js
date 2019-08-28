@@ -14,27 +14,21 @@
     var letters = document.getElementById("target").innerText;
     letters = letters.split("");
     container.innerText = "";
-    var div = document.createElement("div");
-    console.log(container);
-    console.log(letters);
     var fsize = 20;
     letters.forEach(function(letter, i) {
         var wrap = document.createElement("span");
         wrap.innerText = letter;
         wrap.style.fontSize = fsize +"px";
-        if (fsize > 35) {
-            fsize = 15;
+        if (fsize > 50) {
+            fsize = 20;
         }
         fsize += 5;
-       // wrap.style.position = "relative";
-       //  wrap.style.bottom = i+"px";
-       //  wrap.style.transform = "rotate("+-i+"deg)";
         container.appendChild(wrap);
     });
 
-    for (let i = 0; i > letters.length; i++) {
-
-    }
+    // wrap.style.position = "relative";
+    // wrap.style.bottom = i+"px";
+    // wrap.style.transform = "rotate("+-i+" deg)";
     // your code here
     /* function wave(target) {
         var result = [],

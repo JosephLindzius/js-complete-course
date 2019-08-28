@@ -18,9 +18,12 @@
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
     ];
+
     var image = document.querySelector("img");
     var source = document.querySelector("img").getAttribute("src");
     var i = 0;
+
+
     function showPictures() {
         if(i > (gallery.length - 1)){
             i = 0;
