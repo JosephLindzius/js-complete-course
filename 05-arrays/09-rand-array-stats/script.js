@@ -22,6 +22,7 @@
         while  (i < 10) {
             numbers.push(Math.floor(Math.random() * 100));
             sum = sum + numbers[i];
+            document.getElementById("n-" + (i+1)).innerHTML = value;
             i++;
         }
 
@@ -35,7 +36,7 @@
         }
 
         numbers.forEach(function(value, i) {
-            document.getElementById("n-" + (i+1)).innerHTML = value;
+
         });
 
         var average = sum / numbers.length;

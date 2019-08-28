@@ -20,7 +20,7 @@
         console.log(result);
         //result.test;
         if (input.length > 8) {
-            if (result > 2) {
+            if (result) {
                 document.getElementById("validity").innerHTML = "Ok";
             }
         } else {

@@ -29,17 +29,15 @@
     ];
 
     // your code here
-    let x = (fruits) => fruits.filter((v,i) => fruits.indexOf(v) === i);
-    var y = new Set (fruits);
+   // let x = (fruits) => fruits.filter((v,i) => fruits.indexOf(v) === i);
+   // var y = new Set (fruits);
 
-
-    var array = [1, 1, 2, 3, 5, 6, 8];
-    var noDupes = Array.from(new Set (array));
+    var noDupes = Array.from(new Set (fruits));
 
 
     document.getElementById("run").addEventListener("click", function (){
-        console.log(x(fruits));
-        console.log(array);
+       // console.log(x(fruits));
+        console.log(fruits);
         console.log(noDupes);
     })
 })();
