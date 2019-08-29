@@ -40,5 +40,14 @@
         "Ability to assume an enhanced physical form made of solid ice"
       ]
     }
+  ],
+  "vilains": [
+    {
+      "id": 0 ,
+      "name": "Magneto" ,
+      "alterEgo": [
+        "metal manipulation"
+      ]
+    }
   ]
 }

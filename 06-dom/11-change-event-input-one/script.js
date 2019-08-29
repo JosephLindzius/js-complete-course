@@ -13,18 +13,13 @@
 
     // your code here
     document.getElementById("pass-one").addEventListener('input', function () {
-
-
         var input = document.getElementById("pass-one").value;
-
         console.log(input);
         if (input.length === 11) {
             document.getElementById("pass-one").maxLength = input.length;
         } else {
             document.getElementById("counter").innerHTML = input.length + "/10";
         }
-
-
 
     });
 })();

@@ -30,6 +30,7 @@
     var thirdPart = secondPartMin;
     var fourthPart = secondPartMin;
 
+
     var wrap0 = document.createElement("span");
     container.appendChild(wrap0);
     wrap0.innerText = "+32";
@@ -46,7 +47,10 @@
     wrap4.innerText = fourthPart;
     container.appendChild(wrap4);
 
-    container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
+    function displayUpdatedNumber () {
+        container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
+    }
+
 
     button1.addEventListener("click", function() {
         if (firstPart < firstPartMax) {
@@ -60,8 +64,8 @@
         } else {
             firstPart = firstPartMax;
         }
-        container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
-
+        displayUpdatedNumber();
+        button1.innerText = wrap1.innerText
     });
     button2.addEventListener("click", function() {
         if (secondPart < secondPartMax) {
@@ -75,8 +79,8 @@
         } else {
             secondPart = secondPartMax;
         }
-        container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
-
+        displayUpdatedNumber();
+        button2.innerText = wrap2.innerText
     });
 
     button3.addEventListener("click", function() {
@@ -91,8 +95,8 @@
         } else {
             thirdPart = secondPartMax;
         }
-        container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
-
+        displayUpdatedNumber();
+        button3.innerText = wrap3.innerText
     });
     button4.addEventListener("click", function() {
         if (fourthPart < secondPartMax) {
@@ -106,8 +110,8 @@
         } else {
             fourthPart = secondPartMax;
         }
-        container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
-
+        displayUpdatedNumber();
+        button4.innerText = wrap4.innerText
     });
 
 })();
