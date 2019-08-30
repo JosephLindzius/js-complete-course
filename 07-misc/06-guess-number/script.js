@@ -19,16 +19,19 @@
 
      do {
          guess = prompt("Give guess");
+         guess = parseInt(guess);
         if (guess > winningNumber) {
             alert("too high");
         } else if (guess < winningNumber){
             alert("too low");
-        } else {
+        } else if (guess === winningNumber) {
             alert("Congratulations, you have selected the correct number");
+        } else {
+            alert("error");
         }
        alert("attempt:" + attempt);
         attempt++;
-    }  while (guess < winningNumber || guess > winningNumber);
+    }  while ((guess < winningNumber || guess > winningNumber) && guess !== winningNumber);
 
 
 

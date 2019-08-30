@@ -11,4 +11,25 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", function () {
+
+    var id = document.getElementById("hero-id").value;
+
+        var list = [];
+
+        fetch("http://localhost:63342/js-complete-course/_shared/api.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (json) {
+
+                list = json;
+
+                list.heroes.splice(id-1, 1);
+                console.log(list.heroes);
+
+            });
+    })
+
 })();

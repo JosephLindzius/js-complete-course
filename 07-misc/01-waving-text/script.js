@@ -12,10 +12,13 @@
 (function() {
     var container = document.getElementById("target");
     var letters = document.getElementById("target").innerText;
+    console.log(letters);
     letters = letters.split("");
+    console.log(letters);
     container.innerText = "";
     var fsize = 20;
-    letters.forEach(function(letter, i) {
+    var checker = true;
+    letters.forEach(function(letter) {
         var wrap = document.createElement("span");
         wrap.innerText = letter;
         wrap.style.fontSize = fsize +"px";
@@ -23,6 +26,7 @@
             fsize = 20;
         }
         fsize += 5;
+
         container.appendChild(wrap);
     });
 

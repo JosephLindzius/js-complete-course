@@ -46,6 +46,7 @@
     wrap4.innerText = fourthPart;
     container.appendChild(wrap4);
 
+
     container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
 
     function casinoNumber(max, min) {
@@ -54,9 +55,11 @@
 
     button1.addEventListener("click", function() {
         firstPart = casinoNumber(firstPartMax, firstPartMin);
+      //  document.getElementById("part-one").setAttribute("value", document.getElementById("part-one").value);
+        document.getElementById("part-one").value = (parseInt(firstPart)+460);
+        document.getElementById("part-one").setAttribute("value", document.getElementById("part-one").value.toString());
         wrap1.innerText = firstPart + 460;
         container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
-
     });
 
     button2.addEventListener("click", function() {
@@ -65,6 +68,7 @@
         if (secondPart < 10) {
                 wrap2.innerText = "0" + secondPart;
             }
+        document.getElementById("part-two").value = (parseInt(secondPart));
         container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
 
     });
@@ -75,6 +79,7 @@
         if (thirdPart < 10) {
             wrap3.innerText = "0" + thirdPart;
         }
+        document.getElementById("part-three").value = (parseInt(thirdPart));
         container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
 
     });
@@ -85,6 +90,7 @@
         if (fourthPart < 10) {
             wrap4.innerText = "0" + fourthPart;
         }
+        document.getElementById("part-four").value = (parseInt(fourthPart));
         container.innerText = wrap0.innerText + wrap1.innerText + wrap2.innerText + wrap3.innerText + wrap4.innerText;
 
     });
