@@ -46,7 +46,7 @@
                     id: list.heroes.length + 1,
                     name: heroName,
                     alterEgo: alterEgo,
-                    abilities: Array.from(powers.split(","))
+                    abilities: Array.from(powers.split(", "))
                 };
                 list.heroes.push(Object);
                 console.log(list.heroes);

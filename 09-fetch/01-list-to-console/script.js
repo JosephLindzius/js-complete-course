@@ -11,13 +11,20 @@
 
 (() => {
     // your code here
-    (() => {
+
+        document.getElementById("run").addEventListener("click", function() {
+            var list = [];
+            fetch("http://localhost:63342/js-complete-course/_shared/api.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    list = data;
+                    console.log(list);
+
+                })
+
+        })
 
 
-    })();
 })();
-
-const name = "Joseph"
-
-
-console.log(`hello ${name} how are you ?`)

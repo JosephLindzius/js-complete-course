@@ -12,7 +12,9 @@
 (() => {
 
     document.getElementById("run").addEventListener("click", function(){
-        lib.getPosts();
+        window.lib.getPosts(function(error, randomNumber) {
+            console.log(randomNumber);
+        });
     });
 
     // your code here

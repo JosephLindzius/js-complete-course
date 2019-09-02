@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
+
+    /* The function window.lib.getPosts() is available in the script. It returns a Promise that will be resolved, after a short delay, with a table of articles. When you click on the button, call the getPosts function and display the items obtained in the console (the getPosts function will always be resolved without error).*/
+
+    document.getElementById('run').addEventListener("click", function(){
+        window.lib.getPosts()
+            .then(function (response) {
+                console.log(response);
+                return response;
+            })
+
+            });
     // your code here
+
+
 })();

@@ -11,4 +11,23 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", function(){
+
+       /* window.lib.getPosts(function(error, randomNumber) {
+            console.log(randomNumber);
+        });  */
+
+        window.lib.getComments(null, function(_, response) {
+            console.log(response);
+            return response
+
+
+                  //.then(function(error, tblContents) {
+
+                 //   console.log(tblContents);
+              //  })
+        });
+
+    });
 })();
