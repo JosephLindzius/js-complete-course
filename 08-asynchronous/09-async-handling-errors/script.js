@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
+    async function getPersons () {
+        const result = await window.lib.getPersons();
+        if (result !== undefined) {
+            console.log(result);
+        } else {
+            console.error(result);
+        }
+    }
     // your code here
+
+    document.getElementById('run').addEventListener("click", function() {
+        getPersons();
+    });
+
+
 })();

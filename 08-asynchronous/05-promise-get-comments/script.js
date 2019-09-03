@@ -10,15 +10,29 @@
 // You will have time to focus on it later.
 
 (() => {
+
+    var list;
+    var comments;
     // your code here
-    document.getElementById('run').addEventListener("click", function(){
+    document.getElementById('run').addEventListener("click", function () {
+
         window.lib.getPosts()
             .then(function (response) {
-                console.log(response);
+                //  console.log(window.lib.getComments(response));
                 return response;
             })
-
-
+            .then(function (data) {
+                list = data;
+                list.forEach(function (element) {
+                    comments = list[element.id];
+                    if (comments !== undefined) {
+                        element.comment = comments;
+                        console.log(element);
+                    }
+                    console.log(element.content);
+                })
+            })
+//I am broken.
 
     });
 })();

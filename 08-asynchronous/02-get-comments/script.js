@@ -11,22 +11,24 @@
 
 (() => {
     // your code here
-
-    document.getElementById("run").addEventListener("click", function(){
-
-       /* window.lib.getPosts(function(error, randomNumber) {
-            console.log(randomNumber);
-        });  */
-
-        window.lib.getComments(null, function(_, response) {
-            console.log(response);
-            return response
+    let posts, comment;
+    document.getElementById("run").addEventListener("click", function () {
 
 
-                  //.then(function(error, tblContents) {
+        window.lib.getPosts(function (error, articles) {
 
-                 //   console.log(tblContents);
-              //  })
+            posts = articles;
+            posts.forEach(function (post) {
+                window.lib.getComments(null, function (_, commentsReceived) {
+                    comment = commentsReceived[post.id];
+                    if (comment !== undefined) {
+                        post.comment = comment;
+                        console.log(post);
+                    }
+
+                });
+            });
+
         });
 
     });

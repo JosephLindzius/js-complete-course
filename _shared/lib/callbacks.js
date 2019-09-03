@@ -11,11 +11,7 @@
 
     ns.getPosts = next =>
         ns.wait(1000, () =>
-            next(
-                null,
-                Array.from(new Array(utils.getRandomInt(5, 10)).keys()).map(
-                    id => ({id, ...utils.generatePost()}),
-                ),
+            next(null, Array.from(new Array(utils.getRandomInt(5, 10)).keys()).map(id => ({id, ...utils.generatePost()}),),
             ),
         );
 

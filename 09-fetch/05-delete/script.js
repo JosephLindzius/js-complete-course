@@ -28,7 +28,6 @@
 
                 list.heroes.splice(id-1, 1);
                 console.log(list.heroes);
-
             });
     })
 

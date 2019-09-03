@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener("click", function(){
+        var list = [];
+        window.lib.getPersons()
+            .then(function (response) {
+                //  console.log(window.lib.getComments(response));
+                return response;
+            })
+            .then(function(data) {
+                console.log(data);
+                console.error(data);
+
+            })
+
+
+
+    });
 })();
